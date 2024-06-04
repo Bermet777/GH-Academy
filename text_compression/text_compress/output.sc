@@ -1,0 +1,11 @@
+love	2
+books	4
+are	6
+and	8
+interesting	7
+happy	11
+me	10
+I	1
+reading	3
+because	5
+make	9
