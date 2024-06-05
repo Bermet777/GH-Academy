@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
+// read the file and saved the words
 public class App {
   public static void main(String[] args) {
     HashMap<String, Integer> wordMap = new HashMap<>();
