@@ -1,6 +1,9 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Scanner;
+import java.util.zip.GZIPOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
@@ -30,7 +33,20 @@ public class App {
         myWriter.write(entry.getKey() + "\t" + entry.getValue() + "\n");
       }
       myWriter.close();
-      System.out.println("Successfully wrote to the file");
+
+     FileInputStream fis = new FileInputStream(outputFile);
+      FileOutputStream fos = new FileOutputStream("C:\\Users\\berme\\OneDrive\\Desktop\\ACADEMY\\GH-Academy\\text_compression\\text_compress\\output.sc.gz");
+      GZIPOutputStream gzipOS = new GZIPOutputStream(fos);
+      byte[] buffer = new byte[1024];
+      int len;
+      while((len=fis.read(buffer)) != -1){
+        gzipOS.write(buffer, 0, len);
+      }
+      fis.close();
+      gzipOS.close();
+      fos.close();
+
+      System.out.println("Successfully wrote and compressed the file");
 
     } catch (FileNotFoundException e) {
       System.out.println(("An error occurred"));
