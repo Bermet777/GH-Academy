@@ -34,6 +34,8 @@ public class App {
       }
       myWriter.close();
 
+//Compressed file      
+
      FileInputStream fis = new FileInputStream(outputFile);
       FileOutputStream fos = new FileOutputStream("C:\\Users\\berme\\OneDrive\\Desktop\\ACADEMY\\GH-Academy\\text_compression\\text_compress\\output.sc.gz");
       GZIPOutputStream gzipOS = new GZIPOutputStream(fos);
