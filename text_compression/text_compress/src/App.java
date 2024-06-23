@@ -48,7 +48,7 @@ public class App {
       gzipOS.close();
       fos.close();
 
-      System.out.println("File successfully compressed");
+      System.out.println("File compressed");
 
     } catch (FileNotFoundException e) {
       System.out.println(("An error occurred"));
