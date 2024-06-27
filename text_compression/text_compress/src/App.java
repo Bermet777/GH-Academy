@@ -36,7 +36,7 @@ public class App {
 
 //Compressed file      
 
-     FileInputStream fis = new FileInputStream(outputFile);
+     FileInputStream fis = new FileInputStream("C:\\Users\\berme\\OneDrive\\Desktop\\ACADEMY\\GH-Academy\\text_compression\\text_compress\\output.sc");
       FileOutputStream fos = new FileOutputStream("C:\\Users\\berme\\OneDrive\\Desktop\\ACADEMY\\GH-Academy\\text_compression\\text_compress\\output.sc.gz");
       GZIPOutputStream gzipOS = new GZIPOutputStream(fos);
       byte[] buffer = new byte[1024];
