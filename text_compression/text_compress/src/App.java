@@ -34,6 +34,13 @@ public class App {
       }
       myWriter.close();
 
+      compressFile(outputFilePath, compressedFilePath);
+      System.out.println("File compressed");
+
+      // Step 4: Decompress the file
+      decompressFile(compressedFilePath, decompressedFilePath);
+      System.out.println("File decompressed");
+
 //Compressed file      
 
      FileInputStream fis = new FileInputStream("C:\\Users\\berme\\OneDrive\\Desktop\\ACADEMY\\GH-Academy\\text_compression\\text_compress\\output.sc");
